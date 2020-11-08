@@ -17,11 +17,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Output git info
+      - name: Build the GH site
+        run: cp -R ./gh-pages-home ./dist
+
+      - name: Checkout GH pages branch
         run: |
-          git status
-          git branch
+          git fetch
+          git checkout gh-pages
           git remote show origin
+          git push origin gh-pages
       # Runs Build the GH pages site
       # - name: Build the GH pages site
       #   uses: github/super-linter@v3
