@@ -25,6 +25,9 @@ jobs:
           git fetch
           git checkout gh-pages
           git remote show origin
+          git status
+          git add .
+          git commit -m 'Updated gh-pages branch'
           git push origin gh-pages
       # Runs Build the GH pages site
       # - name: Build the GH pages site
