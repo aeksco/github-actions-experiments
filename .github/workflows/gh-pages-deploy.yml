@@ -26,6 +26,8 @@ jobs:
           git checkout gh-pages
           git remote show origin
           git status
+          git config --global user.email "aeksco@gmail.com"
+          git config --global user.name "Alexander Schwartzberg"
           git add .
           git commit -m 'Updated gh-pages branch'
           git push origin gh-pages
